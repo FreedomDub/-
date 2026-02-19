@@ -3,68 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamChannel - Онлайн трансляции</title>
-    <base href="/-/">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>ТЕСТ - StreamChannel</title>
+    <style>
+        /* Стили прямо в HTML - это работает ВСЕГДА */
+        body {
+            background: linear-gradient(45deg, #ff0080, #00ffff) !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-height: 100vh !important;
+            color: white !important;
+        }
+        
+        .test-box {
+            background: rgba(0,0,0,0.7);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            border: 3px solid yellow;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: yellow;
+        }
+        
+        button {
+            background: white;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: yellow;
+        }
+    </style>
 </head>
 <body>
-    <div class="gradient-bg"></div>
-    
-    <nav class="navbar glass-effect">
-        <div class="logo">
-            <i class="fas fa-broadcast-tower"></i>
-            <span>StreamChannel</span>
-        </div>
-        <div class="nav-links">
-            <a href="/-/" class="active">Главная</a>
-            <a href="/-/stream.html">Смотреть эфир</a>
-            <a href="/-/admin.html" class="admin-btn">
-                <i class="fas fa-crown"></i> Админ
-            </a>
-        </div>
-    </nav>
-
-    <main class="container">
-        <section class="hero">
-            <h1 class="glitch-text" data-text="Прямые эфиры">Прямые эфиры</h1>
-            <p class="subtitle">Смотрите уникальный контент в реальном времени</p>
-            <a href="/-/stream.html" class="cta-button pulse">
-                <i class="fas fa-play"></i>
-                Перейти к эфиру
-            </a>
-        </section>
-
-        <section class="features">
-            <div class="feature-card glass-effect">
-                <i class="fas fa-video feature-icon"></i>
-                <h3>HD Качество</h3>
-                <p>Трансляции в высоком разрешении без задержек</p>
-            </div>
-            <div class="feature-card glass-effect">
-                <i class="fas fa-comments feature-icon"></i>
-                <h3>Живой чат</h3>
-                <p>Общайтесь со зрителями в реальном времени</p>
-            </div>
-            <div class="feature-card glass-effect">
-                <i class="fas fa-shield-alt feature-icon"></i>
-                <h3>Безопасность</h3>
-                <p>Модерация чата и защита от спама</p>
-            </div>
-        </section>
-
-        <section class="stream-preview glass-effect">
-            <div class="preview-header">
-                <h2><i class="fas fa-eye"></i> Сейчас в эфире</h2>
-                <span class="live-badge" id="liveBadge" style="display: none;">LIVE</span>
-            </div>
-            <div class="preview-content" id="streamPreview">
-                <p>Эфир еще не начался</p>
-            </div>
-        </section>
-    </main>
-
-    <script src="js/main.js"></script>
+    <div class="test-box">
+        <h1>🎨 ТЕСТОВЫЙ РЕЖИМ</h1>
+        <p>Если вы ЭТО видите, значит CSS работает!</p>
+        <p>Фон должен быть розово-голубым, а этот блок - тёмным с жёлтой рамкой</p>
+        <button onclick="alert('Кнопка работает!')">Нажми меня</button>
+        <button onclick="location.href='stream.html'">Перейти к эфиру</button>
+    </div>
 </body>
 </html>
