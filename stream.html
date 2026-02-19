@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямой эфир - StreamChannel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    
+    <nav class="navbar glass-effect">
+        <div class="logo">
+            <i class="fas fa-broadcast-tower"></i>
+            <span>StreamChannel</span>
+        </div>
+        <div class="nav-links">
+            <a href="/online-stream-site/">Главная</a>
+            <a href="/online-stream-site/stream.html" class="active">Смотреть эфир</a>
+            <a href="/online-stream-site/admin.html" class="admin-btn">
+                <i class="fas fa-crown"></i> Админ
+            </a>
+        </div>
+    </nav>
+
+    <div class="stream-container">
+        <div class="stream-main">
+            <div class="video-container glass-effect" id="videoContainer">
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <i class="fas fa-tv"></i>
+                    <h3>Ожидание трансляции</h3>
+                    <p>Стрим начнется совсем скоро</p>
+                </div>
+                <video id="videoPlayer" style="display: none;" controls></video>
+            </div>
+            
+            <div class="stream-info glass-effect">
+                <div class="stream-header">
+                    <h2>Прямой эфир</h2>
+                    <div class="stream-stats">
+                        <span class="viewer-count">
+                            <i class="fas fa-users"></i>
+                            <span id="viewerCount">0</span> зрителей
+                        </span>
+                        <span class="live-indicator" id="liveIndicator" style="display: none;">LIVE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container glass-effect">
+            <div class="chat-header">
+                <h3><i class="fas fa-comment"></i> Чат</h3>
+                <span class="chat-rules">Без оскорблений</span>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Сообщения будут добавляться сюда -->
+            </div>
+            
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="userName" placeholder="Ваше имя" maxlength="20">
+                <div class="input-group">
+                    <input type="text" class="chat-input" id="messageInput" 
+                           placeholder="Написать сообщение..." maxlength="200">
+                    <button class="send-btn" id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/stream.js"></script>
+</body>
+</html>
